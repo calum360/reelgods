@@ -396,11 +396,41 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+	const CloseBtnD = document.getElementById('desktopCloseBtn');
+  const CloseBtnM = document.getElementById('mobileCloseBtn');
+
+  if (CloseBtnD) {
+    desktopCloseBtn.addEventListener('click', () => {
+      try {
+        gtag('event', 'Viewer_Closed', {
+          event_category: 'engagement',
+          event_label: 'Viewer closed'
+        });
+      } catch (e) {
+        console.warn('❌ gtag desktop close error:', e);
+      }
+    });
+  }
+
+  if (CloseBtnM) {
+    mobileCloseBtn.addEventListener('click', () => {
+      try {
+        gtag('event', 'Viewer_Closed', {
+          event_category: 'engagement',
+          event_label: 'Viewer closed'
+        });
+      } catch (e) {
+        console.warn('❌ gtag mobile close error:', e);
+      }
+    });
+  }
+		  
 		  </script>
-</body>
+
 
 </body>
 </html>
+
 
 
 
