@@ -407,7 +407,17 @@ window.addEventListener('DOMContentLoaded', () => {
   loadIncludes(delayedViewerInit);
 });
 
+//** 15/11/25 **//
+	  document.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('buyNow')) return;
 
+    const domain = e.target.form?.querySelector('input[name="domain"]')?.value || 'unknown';
+    gtag('event', 'BuyNowClick', {
+  event_category: 'engagement',
+  event_label: domain
+});
+
+  });
 </script>
 
 
@@ -447,4 +457,5 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
 </noscript>
 </body>
 </html>
+
 
