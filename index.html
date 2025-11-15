@@ -503,27 +503,42 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
-const closeButtons = ['desktopCloseBtn', 'mobileCloseBtn'];
-closeButtons.forEach(id => {
-  const btnclose = document.getElementById(id);
-  if (btnclose) {
-    btn.addEventListener('click', () => {
+<script>
+  const desktopCloseBtn = document.getElementById('desktopCloseBtn');
+  const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+
+  if (desktopCloseBtn) {
+    desktopCloseBtn.addEventListener('click', () => {
       try {
         gtag('event', 'Viewer_Closed', {
           event_category: 'engagement',
           event_label: 'Viewer closed'
         });
-        console.log('❎ Viewer_Closed');
-      } catch (err) {
-        console.warn('❌ gtag close error:', err);
+      } catch (e) {
+        console.warn('❌ gtag desktop close error:', e);
       }
     });
   }
-});
+
+  if (mobileCloseBtn) {
+    mobileCloseBtn.addEventListener('click', () => {
+      try {
+        gtag('event', 'Viewer_Closed', {
+          event_category: 'engagement',
+          event_label: 'Viewer closed'
+        });
+      } catch (e) {
+        console.warn('❌ gtag mobile close error:', e);
+      }
+    });
+  }
+</script>
+
 
 </script>
 </body>
 </html>
+
 
 
 
