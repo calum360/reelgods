@@ -233,14 +233,14 @@ document.querySelectorAll('.nextCardBtn').forEach(btn => {
   btn.addEventListener('click', () => {
    
 	scrollToCard(currentCardIndex + 1);
-	gtag('event', 'card_viewed'); /** 15/11/25 **/
+	gtag('event', 'card_next'); /** 15/11/25 **/
   });
 });
 
 document.querySelectorAll('.prevCardBtn').forEach(btn => {
   btn.addEventListener('click', () => {
     scrollToCard(currentCardIndex - 1);
-gtag('event', 'card_viewed'); /** 15/11/25 **/
+gtag('event', 'card_prev'); /** 15/11/25 **/
   });
 });
 
@@ -874,6 +874,7 @@ document.addEventListener('click', (e) => {
   // ✅ Let GA fire before navigating away
   setTimeout(() => form.submit(), 300);
 });
+
 
 
 
