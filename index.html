@@ -504,11 +504,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-
+closeButtons.forEach(id => {
+  const btnclose = document.getElementById(id);
+  if (btnclose) {
+    btn.addEventListener('click', () => {
+      try {
+        gtag('event', 'Viewer_Closed', {
+          event_category: 'engagement',
+          event_label: 'Viewer closed'
+        });
+        console.log('❎ Viewer_Closed');
+      } catch (err) {
+        console.warn('❌ gtag close error:', err);
+      }
+    });
+  }
+});
 
 </script>
 </body>
 </html>
+
 
 
 
