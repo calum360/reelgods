@@ -851,18 +851,22 @@ document.addEventListener('visibilitychange', () => {
   }
 }); //** Track Time on Site - Added 15/11/25**//
 
-document.querySelectorAll('.BuyNow').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const card = btn.closest('.domainCard');
-    const domain = card?.classList[1] || 'unknown';
+document.querySelectorAll('.BuyNow').forEach(button => {
+  button.addEventListener('click', () => {
+    const domainCard = button.closest('.domainCard');
+    const domainName = domainCard?.classList[1] || 'unknown_domain';
 
-    if (typeof gtag === 'function') {
-      gtag('event', 'buy_now_click', {
+    try {
+      gtag('event', 'BuyNowClick', {
         event_category: 'engagement',
-        event_label: domain,
+        event_label: domainName
       });
-      console.log('📦 buy_now_click:', domain);
+      console.log('🛒 BuyNowClick tracked for', domainName);
+    } catch (e) {
+      console.warn('❌ gtag not available');
     }
   });
 });
+
+
 
