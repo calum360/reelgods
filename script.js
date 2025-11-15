@@ -798,61 +798,78 @@ document.addEventListener('keydown', (e) => {
 
 /** 15/11/25 **/
 
-// --------------------------------------
-// REELGODS — PRODUCTION ANALYTICS BLOCK
-// --------------------------------------
+// ------------------------------
+// SAFE REELGODS ANALYTICS BLOCK
+// ------------------------------
 
-// Correct buttons based on your actual HTML
-const rg_open = document.getElementById('viewerToggle');
-const rg_close_desktop = document.getElementById('desktopCloseBtn');
-const rg_close_mobile = document.getElementById('mobileCloseBtn');
+document.addEventListener('DOMContentLoaded', () => {
+  const rg_open = document.getElementById('viewerToggle');
+  const rg_close_desktop = document.getElementById('desktopCloseBtn');
+  const rg_close_mobile = document.getElementById('mobileCloseBtn');
 
-// Fire when viewer is opened
-rg_open?.addEventListener('click', () => {
-  try { gtag('event', 'viewer_open'); } catch(e){}
-});
+  let rg_firstCard = null;
+  let rg_seen = new Set();
+  let rg_viewStart = null;
 
-// Session state
-let rg_firstCard = null;
-let rg_seen = new Set();
-
-// Poll activeCard every 400ms
-setInterval(() => {
-  const active = document.querySelector('.domainCard.activeCard');
-  if (!active) return;
-
-  // card identity = second class
-  const cardName = active.classList[1] || "unknown";
-
-  // First viewed card (per session)
-  if (!rg_firstCard) {
-    rg_firstCard = cardName;
+  rg_open?.addEventListener('click', () => {
+    rg_viewStart = Date.now();
     try {
-      gtag('event', 'first_card', { card_name: cardName });
-    } catch (e) {}
+      gtag('event', 'domain_viewer_open');
+      console.log('✅ GA event: domain_viewer_open');
+    } catch (e) {
+      console.warn('GA open fail:', e);
+    }
+  });
+
+  function rg_fire_exit() {
+    const active = document.querySelector('.domainCard.activeCard');
+    const cardName = active?.classList[1] || 'unknown';
+    const duration = rg_viewStart ? Math.floor((Date.now() - rg_viewStart) / 1000) : 0;
+
+    try {
+      gtag('event', 'domain_viewer_close', {
+        first_card: rg_firstCard || 'unknown',
+        last_card: cardName,
+        cards_viewed: rg_seen.size,
+        viewer_time: duration
+      });
+      console.log('✅ GA event: domain_viewer_close');
+    } catch (e) {
+      console.warn('GA close fail:', e);
+    }
+
+    rg_firstCard = null;
+    rg_seen.clear();
+    rg_viewStart = null;
   }
 
-  // Depth tracking (unique)
-  rg_seen.add(cardName);
+  rg_close_desktop?.addEventListener('click', rg_fire_exit);
+  rg_close_mobile?.addEventListener('click', rg_fire_exit);
 
-}, 400);
+  // Safe tracking of active cards
+  const observer = new MutationObserver(() => {
+    const active = document.querySelector('.domainCard.activeCard');
+    if (!active) return;
 
-// Exit event
-function rg_fire_exit() {
-  const active = document.querySelector('.domainCard.activeCard');
-  const cardName = active?.classList[1] || "unknown";
+    const cardName = active.classList[1] || 'unknown';
+    if (!rg_firstCard) rg_firstCard = cardName;
 
-  try {
-    gtag('event', 'viewer_exit', {
-      last_card: cardName,
-      depth: rg_seen.size
-    });
-  } catch(e){}
+    if (!rg_seen.has(cardName)) {
+      rg_seen.add(cardName);
+      try {
+        gtag('event', 'domain_card_view', { card_name: cardName });
+        console.log('👁️ GA card view:', cardName);
+      } catch (e) {
+        console.warn('GA card view fail:', e);
+      }
+    }
+  });
 
-  rg_firstCard = null;
-  rg_seen.clear();
-}
+  observer.observe(document.getElementById('domainViewer'), {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ['class']
+  });
+});
 
-// Fire exit on BOTH close buttons
-rg_close_desktop?.addEventListener('click', rg_fire_exit);
-rg_close_mobile?.addEventListener('click', rg_fire_exit);
