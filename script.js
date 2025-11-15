@@ -802,8 +802,8 @@ document.addEventListener('keydown', (e) => {
 // REELGODS — PRODUCTION ANALYTICS BLOCK
 // --------------------------------------
 
-// Real viewer triggers in your build
-const rg_open = document.getElementById('openViewerBtn');
+// Correct buttons based on your actual HTML
+const rg_open = document.getElementById('viewerToggle');
 const rg_close_desktop = document.getElementById('desktopCloseBtn');
 const rg_close_mobile = document.getElementById('mobileCloseBtn');
 
@@ -828,21 +828,16 @@ setInterval(() => {
   if (!rg_firstCard) {
     rg_firstCard = cardName;
     try {
-      gtag('event', 'first_card', {
-        card_name: cardName
-      });
+      gtag('event', 'first_card', { card_name: cardName });
     } catch (e) {}
   }
 
   // Depth tracking (unique)
-  if (!rg_seen.has(cardName)) {
-    rg_seen.add(cardName);
-  }
+  rg_seen.add(cardName);
 
 }, 400);
 
-
-// Unified closure handler
+// Exit event
 function rg_fire_exit() {
   const active = document.querySelector('.domainCard.activeCard');
   const cardName = active?.classList[1] || "unknown";
@@ -854,17 +849,10 @@ function rg_fire_exit() {
     });
   } catch(e){}
 
-  // reset session state
   rg_firstCard = null;
   rg_seen.clear();
 }
 
-// Close buttons fire exit event
-rg_close_des
-
-
-
-
-
-
-
+// Fire exit on BOTH close buttons
+rg_close_desktop?.addEventListener('click', rg_fire_exit);
+rg_close_mobile?.addEventListener('click', rg_fire_exit);
