@@ -851,22 +851,28 @@ document.addEventListener('visibilitychange', () => {
   }
 }); //** Track Time on Site - Added 15/11/25**//
 
-
 document.addEventListener('click', (e) => {
-  if (e.target && e.target.classList.contains('buyNow')) {
-    const card = e.target.closest('.domainCard');
-    const cardName = [...card.classList].find(cls => cls !== 'domainCard' && !cls.startsWith('active')) || 'unknown';
+  const btn = e.target.closest('.buyNow');
+  if (!btn) return;
 
-    try {
-      gtag('event', 'BuyNowClick', {
-        event_category: 'engagement',
-        event_label: cardName
-      });
-      console.log('🛒 BuyNowClick fired:', cardName);
-    } catch (err) {
-      console.warn('gtag failed', err);
-    }
+  e.preventDefault(); // ⛔ prevent instant submit
+
+  const form = btn.closest('form');
+  const card = btn.closest('.domainCard');
+  const cardName = [...card.classList].find(cls => cls !== 'domainCard' && !cls.startsWith('active')) || 'unknown';
+
+  try {
+    gtag('event', 'BuyNowClick', {
+      event_category: 'engagement',
+      event_label: cardName
+    });
+    console.log('🛒 BuyNowClick fired:', cardName);
+  } catch (err) {
+    console.warn('gtag failed', err);
   }
+
+  // ✅ Let GA fire before navigating away
+  setTimeout(() => form.submit(), 300);
 });
 
 
