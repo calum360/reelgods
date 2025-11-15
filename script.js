@@ -233,14 +233,14 @@ document.querySelectorAll('.nextCardBtn').forEach(btn => {
   btn.addEventListener('click', () => {
    
 	scrollToCard(currentCardIndex + 1);
-	
+	gtag('event', 'card_viewed');
   });
 });
 
 document.querySelectorAll('.prevCardBtn').forEach(btn => {
   btn.addEventListener('click', () => {
     scrollToCard(currentCardIndex - 1);
-
+gtag('event', 'card_viewed');
   });
 });
 
@@ -822,3 +822,4 @@ document.addEventListener('DOMContentLoaded', () => {
     attributeFilter: ['class'],
   });
 });
+
