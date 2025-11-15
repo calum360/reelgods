@@ -233,14 +233,14 @@ document.querySelectorAll('.nextCardBtn').forEach(btn => {
   btn.addEventListener('click', () => {
    
 	scrollToCard(currentCardIndex + 1);
-	gtag('event', 'card_viewed');
+	gtag('event', 'card_viewed'); /** 15/11/25 **/
   });
 });
 
 document.querySelectorAll('.prevCardBtn').forEach(btn => {
   btn.addEventListener('click', () => {
     scrollToCard(currentCardIndex - 1);
-gtag('event', 'card_viewed');
+gtag('event', 'card_viewed'); /** 15/11/25 **/
   });
 });
 
@@ -822,4 +822,5 @@ document.addEventListener('DOMContentLoaded', () => {
     attributeFilter: ['class'],
   });
 });
+
 
