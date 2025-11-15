@@ -851,3 +851,18 @@ document.addEventListener('visibilitychange', () => {
   }
 }); //** Track Time on Site - Added 15/11/25**//
 
+document.querySelectorAll('.BuyNow').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.domainCard');
+    const domain = card?.classList[1] || 'unknown';
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'buy_now_click', {
+        event_category: 'engagement',
+        event_label: domain,
+      });
+      console.log('📦 buy_now_click:', domain);
+    }
+  });
+});
+
