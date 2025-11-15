@@ -873,3 +873,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+window._reelgods = {
+  get seen() { return [...rg_seen]; },
+  get seenCount() { return rg_seen.size; },
+  get firstCard() { return rg_firstCard; }
+};
