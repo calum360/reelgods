@@ -852,7 +852,7 @@ document.addEventListener('visibilitychange', () => {
 }); //** Track Time on Site - Added 15/11/25**//
 
 
-document.querySelectorAll('.BuyNow').forEach(btn => {
+document.querySelectorAll('.buyNow').forEach(btn => {
   btn.addEventListener('click', () => {
     const card = btn.closest('.domainCard');
     const cardName = [...card.classList].find(cls => cls !== 'domainCard' && !cls.startsWith('active')) || 'unknown';
@@ -868,6 +868,7 @@ document.querySelectorAll('.BuyNow').forEach(btn => {
     }
   });
 });
+
 
 
 
