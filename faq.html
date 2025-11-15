@@ -441,9 +441,30 @@ Once a domain is claimed, it’s gone - so act fast.</p>
 </div>
     </div>
   </div>
+<script>
 
+ window.addEventListener('DOMContentLoaded', () => {
+    const openViewerBtn = document.getElementById('openViewerBtn');
+
+    if (openViewerBtn) {
+      openViewerBtn.addEventListener('click', () => {
+        try {
+          gtag('event', 'Viewer_Opened', {
+            event_category: 'engagement',
+            event_label: 'Viewer launched'
+          });
+          console.log('📈 Viewer_Opened');
+        } catch (err) {
+          console.warn('❌ gtag viewer open error:', err);
+        }
+      });
+    }
+  });
+	
+</script>
 </body>
 </html>
+
 
 
 
