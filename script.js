@@ -824,3 +824,30 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+//** Track Time on Site - Added 15/11/25**//
+let rg_startTime = Date.now();
+
+window.addEventListener('beforeunload', () => {
+  const duration = Math.floor((Date.now() - rg_startTime) / 1000);
+  try {
+    gtag('event', 'time_on_site', {
+      duration_seconds: duration
+    });
+  } catch (e) {
+    console.warn('❌ time_on_site unload error', e);
+  }
+});
+
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden') {
+    const duration = Math.floor((Date.now() - rg_startTime) / 1000);
+    try {
+      gtag('event', 'time_on_site', {
+        duration_seconds: duration
+      });
+    } catch (e) {
+      console.warn('❌ time_on_site visibility error', e);
+    }
+  }
+}); //** Track Time on Site - Added 15/11/25**//
+
