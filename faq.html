@@ -324,7 +324,23 @@ window.addEventListener('DOMContentLoaded', () => {
   loadIncludes(delayedViewerInit);
 });
 
+window.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('buyNow')) return;
 
+    const domain = e.target.form?.querySelector('input[name="domain"]')?.value || 'unknown';
+    const eventName = `BuyNow_${domain.replace('.com', '').replace(/\W+/g, '')}`;
+
+    try {
+      gtag('event', eventName, {
+        event_category: 'engagement'
+      });
+      console.log('🛒 Fired:', eventName);
+    } catch (err) {
+      console.warn('gtag failed', err);
+    }
+  });
+});
 </script>
 
 
@@ -420,5 +436,6 @@ Once a domain is claimed, it’s gone - so act fast.</p>
 
 </body>
 </html>
+
 
 
