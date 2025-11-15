@@ -798,59 +798,71 @@ document.addEventListener('keydown', (e) => {
 
 /** 15/11/25 **/
 
-// -------------------------------
-// SIMPLE REELGODS ANALYTICS BLOCK
-// -------------------------------
+// --------------------------------------
+// REELGODS — PRODUCTION ANALYTICS BLOCK
+// --------------------------------------
 
-// Track when viewer is opened
-document.getElementById('openBtn')?.addEventListener('click', () => {
+// Real viewer triggers in your build
+const rg_open = document.getElementById('openViewerBtn');
+const rg_close_desktop = document.getElementById('desktopCloseBtn');
+const rg_close_mobile = document.getElementById('mobileCloseBtn');
+
+// Fire when viewer is opened
+rg_open?.addEventListener('click', () => {
   try { gtag('event', 'viewer_open'); } catch(e){}
 });
 
-// Internal state
+// Session state
 let rg_firstCard = null;
-let rg_cardCount = 0;
+let rg_seen = new Set();
 
-// Safely detect active card every 400ms
+// Poll activeCard every 400ms
 setInterval(() => {
-  const active = document.querySelector('.domainCard.active');
+  const active = document.querySelector('.domainCard.activeCard');
   if (!active) return;
 
-  const cardName = active.classList[1];
+  // card identity = second class
+  const cardName = active.classList[1] || "unknown";
 
-  // First card seen in this session
+  // First viewed card (per session)
   if (!rg_firstCard) {
     rg_firstCard = cardName;
     try {
-      gtag('event', 'first_card', { card_name: cardName });
-    } catch(e){}
+      gtag('event', 'first_card', {
+        card_name: cardName
+      });
+    } catch (e) {}
   }
 
-  // Depth: count unique cards seen
-  if (!active.dataset.rg_seen) {
-    active.dataset.rg_seen = "1";
-    rg_cardCount++;
+  // Depth tracking (unique)
+  if (!rg_seen.has(cardName)) {
+    rg_seen.add(cardName);
   }
 
 }, 400);
 
 
-// Track exit when viewer closes
-document.getElementById('closeBtn')?.addEventListener('click', () => {
-  const active = document.querySelector('.domainCard.active');
-  const cardName = active ? active.classList[1] : "unknown";
+// Unified closure handler
+function rg_fire_exit() {
+  const active = document.querySelector('.domainCard.activeCard');
+  const cardName = active?.classList[1] || "unknown";
 
   try {
     gtag('event', 'viewer_exit', {
       last_card: cardName,
-      depth: rg_cardCount
+      depth: rg_seen.size
     });
   } catch(e){}
 
-  // reset for next session
+  // reset session state
   rg_firstCard = null;
-  rg_cardCount = 0;
-});
+  rg_seen.clear();
+}
+
+// Close buttons fire exit event
+rg_close_des
+
+
 
 
 
