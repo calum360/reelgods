@@ -504,10 +504,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const desktopCloseBtn = document.getElementById('desktopCloseBtn');
-  const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+  const CloseBtnD = document.getElementById('desktopCloseBtn');
+  const CloseBtnM = document.getElementById('mobileCloseBtn');
 
-  if (desktopCloseBtn) {
+  if (CloseBtnD) {
     desktopCloseBtn.addEventListener('click', () => {
       try {
         gtag('event', 'Viewer_Closed', {
@@ -520,7 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (mobileCloseBtn) {
+  if (CloseBtnM) {
     mobileCloseBtn.addEventListener('click', () => {
       try {
         gtag('event', 'Viewer_Closed', {
@@ -538,6 +538,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
 
 
 
