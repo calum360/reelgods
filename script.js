@@ -796,6 +796,63 @@ document.addEventListener('keydown', (e) => {
 }
 
 
+/** 15/11/25 **/
+
+// -------------------------------
+// SIMPLE REELGODS ANALYTICS BLOCK
+// -------------------------------
+
+// Track when viewer is opened
+document.getElementById('openBtn')?.addEventListener('click', () => {
+  try { gtag('event', 'viewer_open'); } catch(e){}
+});
+
+// Internal state
+let rg_firstCard = null;
+let rg_cardCount = 0;
+
+// Safely detect active card every 400ms
+setInterval(() => {
+  const active = document.querySelector('.domainCard.active');
+  if (!active) return;
+
+  const cardName = active.classList[1];
+
+  // First card seen in this session
+  if (!rg_firstCard) {
+    rg_firstCard = cardName;
+    try {
+      gtag('event', 'first_card', { card_name: cardName });
+    } catch(e){}
+  }
+
+  // Depth: count unique cards seen
+  if (!active.dataset.rg_seen) {
+    active.dataset.rg_seen = "1";
+    rg_cardCount++;
+  }
+
+}, 400);
+
+
+// Track exit when viewer closes
+document.getElementById('closeBtn')?.addEventListener('click', () => {
+  const active = document.querySelector('.domainCard.active');
+  const cardName = active ? active.classList[1] : "unknown";
+
+  try {
+    gtag('event', 'viewer_exit', {
+      last_card: cardName,
+      depth: rg_cardCount
+    });
+  } catch(e){}
+
+  // reset for next session
+  rg_firstCard = null;
+  rg_cardCount = 0;
+});
+
+
 
 
 
