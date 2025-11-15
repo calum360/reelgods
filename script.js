@@ -880,21 +880,7 @@ document.addEventListener('click', (e) => {
 
 
 
-document.querySelectorAll('footer a').forEach(link => {
-  link.addEventListener('click', (e) => {
-    const label = (link.textContent || link.getAttribute('href') || 'unknown').trim().toLowerCase().replace(/\s+/g, '_');
 
-    try {
-      gtag('event', `${label}_clicked`, {
-        event_category: 'footer_nav',
-        event_label: link.href
-      });
-      console.log(`🔗 ${label}_clicked → ${link.href}`);
-    } catch (err) {
-      console.warn('❌ gtag footer click error:', err);
-    }
-  });
-});
 
 
 
