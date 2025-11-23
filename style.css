@@ -3844,3 +3844,32 @@ box-shadow: inset 0 0 8px rgba(255,255,255,0.1), 0 2px 8px rgba(0, 0, 0, 1);
   50%  { left: 130%; }
   100% { left: 130%; }
 }
+
+
+
+/* Wrapper stays centered no matter what */
+.rg-linkedin-wrapper {
+  width: 100%;
+  display: flex;
+  
+  justify-content: center;
+
+  margin: 0px 0 0px 0; /* adjust top gap and bottom gap as needed */
+margin-bottom: -3vh;
+}
+
+/* Icon styling (ultra-clean, retina perfect) */
+.rg-linkedin-icon {
+  width: 36px;      /* perfect size for your layout */
+  height: 36px;
+  object-fit: contain;
+  opacity: 0.78;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  cursor: pointer;
+}
+
+/* Clean hover */
+.rg-linkedin-icon:hover {
+  opacity: 1;
+  transform: translateY(-0.1px);
+}
