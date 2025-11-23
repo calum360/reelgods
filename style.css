@@ -1443,7 +1443,7 @@ margin-top: 5px;
 } @media (max-width: 768px) {
 	
 	.hero-logo img{
-		max-width: 266px;
+		max-width: 232px;
 	}
 }
 
@@ -3875,4 +3875,5 @@ margin-bottom: -3vh;
 }
 
 /** **/
+
 
