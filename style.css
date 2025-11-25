@@ -2449,14 +2449,14 @@ textarea.error {
 
 .tagline {
   font-size: 1.1rem;
-  color: #ccc;
+  color: white;
   text-align: center;
   max-width: 1000px;
   margin: 0 auto;
   line-height: 1.5;
   font-weight: 300;
   font-family: 'poppins', 'inter', sans-serif;
-  
+  letter-spacing: 1px; 
 }
 
 .tagline .highlight {
@@ -3875,6 +3875,7 @@ margin-bottom: -3vh;
 }
 
 /** **/
+
 
 
 
