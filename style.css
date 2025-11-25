@@ -1449,15 +1449,15 @@ margin-top: 5px;
 
 .hero h1 {
 
-  font-size: 2rem;
-  font-weight: 550;
-  text-align: center;
-  background: linear-gradient(135deg, #fcd34d, #facc15, #f59e0b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-	margin-bottom: 0px;
-	font-family: 'inter', 'poppins', sans-serif;
-	text-shadow: 0 1px 4px rgba(255, 215, 0, 0.35);
+ font-size: 2.15rem;                    
+  font-weight: 550;                    
+  font-family: 'Inter Tight', 'Poppins', sans-serif;
+  letter-spacing: -0.7px;              
+  margin-bottom: 6px;  
+  /* Proper separation from subline */
+word-spacing: 3px;  
+
+color: white;
 	
 } @media (max-width: 768px) {
 	.hero h1{
@@ -3875,5 +3875,6 @@ margin-bottom: -3vh;
 }
 
 /** **/
+
 
 
