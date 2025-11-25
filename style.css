@@ -3848,7 +3848,7 @@ box-shadow: inset 0 0 8px rgba(255,255,255,0.1), 0 2px 8px rgba(0, 0, 0, 1);
 
 
 
-/* Wrapper stays centered no matter what */
+
 .rg-linkedin-wrapper {
   width: 100%;
   display: flex;
@@ -3856,7 +3856,7 @@ box-shadow: inset 0 0 8px rgba(255,255,255,0.1), 0 2px 8px rgba(0, 0, 0, 1);
   justify-content: center;
 
   margin: 0px 0 0px 0; /* adjust top gap and bottom gap as needed */
-margin-bottom: -3vh;
+margin-bottom: -2vh;
 }
 
 /* Icon styling (ultra-clean, retina perfect) */
@@ -3876,6 +3876,7 @@ margin-bottom: -3vh;
 }
 
 /** **/
+
 
 
 
