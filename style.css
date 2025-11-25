@@ -1502,7 +1502,7 @@ letter-spacing: 0.3px;
   padding-top: 2vh;
   padding-bottom: 2vh;
   background: linear-gradient(to right, #161616, #181818);
-  color: #bbb;
+  color: #D0D0D0;
   font-size: 0.85rem;
   border-top: 3px solid;
   border-image: linear-gradient(to right, #ff7300, #ff0066) 1;
@@ -2638,7 +2638,7 @@ textarea.error {
 
 
 .footer-link {
-  color: #888;
+  color: #D0D0D0;
   text-decoration: none;
   margin: 0 0.5rem;
   font-weight: 400;
@@ -3875,6 +3875,7 @@ margin-bottom: -3vh;
 }
 
 /** **/
+
 
 
 
