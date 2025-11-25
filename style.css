@@ -2599,7 +2599,9 @@ textarea.error {
 
 	  padding: 0px;
 	  margin-bottom: 0px;
-	  margin-top: 20px;
+	
+	    margin-top: 40px;
+	  margin-bottom: 15px;
 	
   }
   .hero-content h1{
@@ -3876,6 +3878,7 @@ margin-bottom: -1vh;
 }
 
 /** **/
+
 
 
 
