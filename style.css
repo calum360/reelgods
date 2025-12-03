@@ -4063,8 +4063,13 @@ margin-bottom: -3vh;
 	  .helpSection{
 		  margin-top: 4px;
 	  }
+	  .openViewerBtn{
+		  margin-top: 0px;
+		  margin-bottom: 0px;
+	  }
   }
 }
+
 
 
 
