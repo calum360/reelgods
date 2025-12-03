@@ -5,27 +5,47 @@
 	<!-- LinkedIn In-App Browser Bypass -->
 <script>
 (function() {
-  const ua = navigator.userAgent || navigator.vendor || window.opera;
-  const isLinkedIn = ua.includes("LinkedInApp") || ua.includes("LkInApp");
+  // 1 — LinkedIn in-app browser loads sites in a restricted pseudo-iframe
+  let inApp = false;
 
-  if (isLinkedIn) {
-    // Clean fallback message (0% styling risk)
-    document.body.innerHTML = `
-      <div style="
-        font-family: Inter, sans-serif;
-        padding: 40px;
-        text-align: center;
-        font-size: 18px;
-        line-height: 1.5;
-        color: white;
-      ">
-        <strong>Open ReelGods.com in your browser</strong><br><br>
-        LinkedIn’s in-app browser cannot render advanced interactive sites.<br>
-        Tap the menu (•••) and select <strong>“Open in Chrome/Safari”</strong>.
-      </div>`;
+  try {
+    // Fails or returns false ONLY inside in-app WebViews
+    inApp = window.self !== window.top;
+  } catch (e) {
+    // SecurityError means iframe/WebView — treat as in-app
+    inApp = true;
+  }
+
+  // 2 — WebView / Embedded browser behavioural fingerprint
+  const ua = navigator.userAgent || "";
+  const webViewDetected =
+    /FBAN|FBAV|Instagram|Line|wv\)/i.test(ua) ||
+    (!!window.chrome === false && /Android/i.test(ua));
+
+  // LinkedIn often suppresses UA — so combine both signals
+  if (inApp || webViewDetected) {
+
+    document.addEventListener("DOMContentLoaded", function() {
+      // Hard prevent your full site from loading
+      document.body.innerHTML = `
+        <div style="
+          font-family: Inter, sans-serif;
+          padding: 40px;
+          text-align: center;
+          font-size: 18px;
+          line-height: 1.5;
+          color: white;
+        ">
+          <strong>Open ReelGods.com in Your Browser</strong><br><br>
+          LinkedIn’s in-app browser cannot display this site correctly.<br>
+          Tap <strong>•••</strong> and choose <strong>“Open in Chrome/Safari”</strong>.
+        </div>
+      `;
+    });
   }
 })();
 </script>
+
 	 <meta charset="UTF-8">
 	 <title>Premium iGaming Domains for Sale</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -567,6 +587,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
 
 
 
