@@ -4016,9 +4016,7 @@ margin-bottom: -3vh;
   height: auto;        /* preserve aspect ratio */
 		  
 	  }
-	  .secure-transfer-text{
-		  padding: 0.5rem;
-	  }
+
 
 	  .escrowIntroText .green {
 		  font-size: 0.75rem;
@@ -4050,6 +4048,7 @@ margin-bottom: -3vh;
 		}
   }
 }
+
 
 
 
