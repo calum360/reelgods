@@ -2,6 +2,30 @@
 <!DOCTYPE html>
 <html class="preload-viewer">
 <head>
+	<!-- LinkedIn In-App Browser Bypass -->
+<script>
+(function() {
+  const ua = navigator.userAgent || navigator.vendor || window.opera;
+  const isLinkedIn = ua.includes("LinkedInApp") || ua.includes("LkInApp");
+
+  if (isLinkedIn) {
+    // Clean fallback message (0% styling risk)
+    document.body.innerHTML = `
+      <div style="
+        font-family: Inter, sans-serif;
+        padding: 40px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.5;
+        color: white;
+      ">
+        <strong>Open ReelGods.com in your browser</strong><br><br>
+        LinkedIn’s in-app browser cannot render advanced interactive sites.<br>
+        Tap the menu (•••) and select <strong>“Open in Chrome/Safari”</strong>.
+      </div>`;
+  }
+})();
+</script>
 	 <meta charset="UTF-8">
 	 <title>Premium iGaming Domains for Sale</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -543,6 +567,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
 
 
 
