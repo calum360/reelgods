@@ -4050,8 +4050,13 @@ margin-bottom: -3vh;
 		.step{
 			gap: 4px;
 		}
+	  .stepIconSpacer{
+		  width: 30px;
+		  height: 30px;
+	  }
   }
 }
+
 
 
 
