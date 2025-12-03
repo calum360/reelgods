@@ -3999,9 +3999,13 @@ margin-bottom: -3vh;
     height: 58px;
     width: 42px;
 	   }
+	  .navButton{
+		  bottom: 0px;
+	  }
 
   }
 }
+
 
 
 
