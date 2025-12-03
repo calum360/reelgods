@@ -3986,9 +3986,13 @@ margin-bottom: -3vh;
 	  .domainTitle h2{
 		  font-size: 1rem;
 	  }
+	  .trust-badge{
+		  width: 45px;
+	  }
 
   }
 }
+
 
 
 
