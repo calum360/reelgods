@@ -3965,15 +3965,14 @@ margin-bottom: -3vh;
 		  width: 29px;
 	  }
 	  .footer-links{
-		  whitespace: nowrap;
+		  gap: 6px;
 	  }
 
-	  .footer-text{
-		  font-size: 0.3rem;
-	  }
+	  
 
   }
 }
+
 
 
 
