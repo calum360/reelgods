@@ -3962,9 +3962,14 @@ margin-bottom: -3vh;
 	.footer{
 		font-size: 0.5rem;
 	}
+	  .rg-linkedin-icon{
+		  height: 26px;
+		  width: 26px;
+	  }
 
   }
 }
+
 
 
 
