@@ -3968,8 +3968,13 @@ margin-bottom: -3vh;
 		  whitespace: nowrap;
 	  }
 
+	  footer{
+		  font-size: 0.5rem;
+	  }
+
   }
 }
+
 
 
 
