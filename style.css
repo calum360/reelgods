@@ -3991,7 +3991,7 @@ margin-bottom: -3vh;
 	  }
 	  .domainBadge{
 		  font-size: 10px;
-		  top: 8px;
+		  top: 7px;
 		   padding: 1px 6px;
 	  }
 
@@ -4000,11 +4000,12 @@ margin-bottom: -3vh;
     width: 42px;
 	   }
 	  .navButton{
-		  bottom: 0px;
+		  bottom: 0px !important;
 	  }
 
   }
 }
+
 
 
 
