@@ -3082,7 +3082,7 @@ font-weight: 300;
 	height: auto;
     opacity: 1;
   }
-  .stepIconSpace{
+  .stepIconSpacer{
 	  margin-bottom:0px;
 	  margin-top: 0px;
   }
@@ -4056,6 +4056,8 @@ margin-bottom: -3vh;
 		  width: 30px;
 		  height: 30px;
 		  padding: 0px;
+		  margin-top: 7px;
+		  margin-bottom: 7px;
 		  
 	  }
 	  .helpSection{
@@ -4063,6 +4065,7 @@ margin-bottom: -3vh;
 	  }
   }
 }
+
 
 
 
