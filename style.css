@@ -3959,12 +3959,13 @@ margin-bottom: -3vh;
 		margin-top: 0px;
     }
 
-	 .footer-text{
-		 font-size: 0.7rem;
+	 .footer-links{
+		 gap: 4px;
 	 }
 
   }
 }
+
 
 
 
