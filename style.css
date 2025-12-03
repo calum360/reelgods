@@ -4017,12 +4017,12 @@ margin-bottom: -3vh;
 		  
 	  }
 	  .secure-transfer-text{
-		  padding: 0px;
+		  padding: 0.5rem;
 	  }
 
 	  .escrowIntroText .green {
 		  font-size: 0.75rem;
-		  line-height: 1.2;
+		  line-height: 1.1;
 	  }
 	  .stepIcon{
 		  width: 31px;
@@ -4041,9 +4041,16 @@ margin-bottom: -3vh;
 		  font-size: 0.8rem;
 	  }
 
-	
+	  .escrowSteps{
+		  margin-top: 1px;
+	  }
+
+		.step{
+			gap: 4px;
+		}
   }
 }
+
 
 
 
