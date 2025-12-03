@@ -4049,6 +4049,8 @@ margin-bottom: -3vh;
 
 	  .escrowSteps{
 		  margin-top: 1px;
+		  gap: 0.3rem;
+		  margin-bottom: -5px;
 	  }
 
 		
@@ -4063,6 +4065,7 @@ margin-bottom: -3vh;
 	  }
   }
 }
+
 
 
 
