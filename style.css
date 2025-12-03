@@ -3857,7 +3857,7 @@ box-shadow: inset 0 0 8px rgba(255,255,255,0.1), 0 2px 8px rgba(0, 0, 0, 1);
 
 
 
-.rg-linkedin-wrapper {
+.rg--wrapper {
   width: 100%;
   display: flex;
   
@@ -3868,7 +3868,7 @@ margin-bottom: -1vh;
 }
 
 /* Icon styling (ultra-clean, retina perfect) */
-.rg-linkedin-icon {
+.rg--icon {
   width: 36px;      /* perfect size for your layout */
   height: 36px;
   object-fit: contain;
@@ -3878,7 +3878,7 @@ margin-bottom: -1vh;
 }
 
 /* Clean hover */
-.rg-linkedin-icon:hover {
+.rg--icon:hover {
   opacity: 1;
   transform: translateY(-0.1px);
 }
@@ -3907,7 +3907,7 @@ margin-bottom: -1vh;
     .hero-logo img {
       max-width: 150px !important;
       width: 100% !important;
-		margin-top: 0px;
+		margin-top: -40px;
     }
 
     .hero h1 {
@@ -3927,10 +3927,17 @@ margin-bottom: -1vh;
       font-size: 1rem !important;
       padding: 14px 16px !important;
 	max-width: 65%;
+		margin-top: 0px;
     }
+
+	  .rg-linkedin-icon{
+		  width: 26px;
+		  height: 26px;
+	  }
 
   }
 }
+
 
 
 
