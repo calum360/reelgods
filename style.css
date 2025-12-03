@@ -4012,9 +4012,12 @@ margin-bottom: -3vh;
 	  .secure-transfer-img{
  display: block;
   
-  width: 32vw;       /* otherwise take up 40% of viewport width */
+  width: 33vw;       /* otherwise take up 40% of viewport width */
   height: auto;        /* preserve aspect ratio */
 		  
+	  }
+	  .secure-transfer-text{
+		  padding: 0px;
 	  }
 
 	  .escrowIntroText .green {
@@ -4041,6 +4044,7 @@ margin-bottom: -3vh;
 	
   }
 }
+
 
 
 
