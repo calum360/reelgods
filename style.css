@@ -4000,7 +4000,7 @@ margin-bottom: -3vh;
     width: 42px;
 	   }
 	  .navButtons{
-		  bottom: 0px !important;
+		  bottom: -10px !important;
 	  }
 
 	  .navBtn svg {
@@ -4012,6 +4012,7 @@ margin-bottom: -3vh;
 	
   }
 }
+
 
 
 
