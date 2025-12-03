@@ -3905,8 +3905,9 @@ margin-bottom: -1vh;
     }
 
     .hero-logo img {
-      max-width: 200px !important;
+      max-width: 170px !important;
       width: 100% !important;
+		margin-top: 0px;
     }
 
     .hero h1 {
@@ -3923,11 +3924,12 @@ margin-bottom: -1vh;
 
     #openViewerBtn {
       font-size: 1rem !important;
-      padding: 14px 32px !important;
+      padding: 14px 16px !important;
     }
 
   }
 }
+
 
 
 
