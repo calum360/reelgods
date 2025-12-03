@@ -3910,11 +3910,11 @@ margin-bottom: -1vh;
     }
 
     .hero h1 {
-      font-size: 1.9rem !important;
+      font-size: 1.4rem !important;
     }
 
     .tagline {
-      font-size: 1rem !important;
+      font-size: 0.8rem !important;
     }
 
     #openViewerBtn {
@@ -3924,6 +3924,7 @@ margin-bottom: -1vh;
 
   }
 }
+
 
 
 
