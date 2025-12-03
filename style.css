@@ -3960,7 +3960,7 @@ margin-bottom: -3vh;
     }
 
 	.footer{
-		font-size: 0.5rem;
+		font-size: 0.5rem !important;
 	}
 	  .rg-linkedin-icon{
 		  height: 26px;
@@ -3969,6 +3969,7 @@ margin-bottom: -3vh;
 
   }
 }
+
 
 
 
