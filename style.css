@@ -4024,7 +4024,7 @@ margin-bottom: -3vh;
 
 	  .escrowIntroText .green {
 		  font-size: 0.75rem;
-		  line-height: 1.1;
+		  line-height: 1;
 	  }
 	  .stepIcon{
 		  width: 31px;
@@ -4058,6 +4058,7 @@ margin-bottom: -3vh;
 	  }
   }
 }
+
 
 
 
