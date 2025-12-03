@@ -3905,25 +3905,30 @@ margin-bottom: -1vh;
     }
 
     .hero-logo img {
-      max-width: 240px !important;
+      max-width: 200px !important;
       width: 100% !important;
     }
 
     .hero h1 {
       font-size: 1.4rem !important;
+		padding-left: 10px;
+		padding-right: 10px;
     }
 
     .tagline {
       font-size: 0.8rem !important;
+		padding-left: 10px;
+		padding-right: 10px;
     }
 
     #openViewerBtn {
-      font-size: 1.2rem !important;
+      font-size: 1rem !important;
       padding: 14px 32px !important;
     }
 
   }
 }
+
 
 
 
