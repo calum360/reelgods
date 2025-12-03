@@ -4041,6 +4041,7 @@ margin-bottom: -3vh;
 
 	  .helpText{
 		  font-size: 7px;
+		  max-width: 50%;
 	  }
 
 	  .escrowSteps{
@@ -4058,6 +4059,7 @@ margin-bottom: -3vh;
 	  }
   }
 }
+
 
 
 
