@@ -4003,9 +4003,16 @@ margin-bottom: -3vh;
 		  bottom: 0px !important;
 	  }
 
+	  .navBtn svg {
+  stroke: #fff;
+  stroke-width: 1.6;
+  width: 26px;
+  height: 26px;
+}
 	
   }
 }
+
 
 
 
