@@ -4025,10 +4025,14 @@ margin-bottom: -3vh;
 		  width: 31px;
 		  height: 31px;
 	  }
+	  .stepText{
+		  font-size: 0.8rem;
+	  }
 
 	
   }
 }
+
 
 
 
