@@ -2,53 +2,13 @@
 <!DOCTYPE html>
 <html class="preload-viewer">
 <head>
-	<!-- LinkedIn In-App Browser Bypass -->
-<script>
-(function() {
-  // 1 — LinkedIn in-app browser loads sites in a restricted pseudo-iframe
-  let inApp = false;
-
-  try {
-    // Fails or returns false ONLY inside in-app WebViews
-    inApp = window.self !== window.top;
-  } catch (e) {
-    // SecurityError means iframe/WebView — treat as in-app
-    inApp = true;
-  }
-
-  // 2 — WebView / Embedded browser behavioural fingerprint
-  const ua = navigator.userAgent || "";
-  const webViewDetected =
-    /FBAN|FBAV|Instagram|Line|wv\)/i.test(ua) ||
-    (!!window.chrome === false && /Android/i.test(ua));
-
-  // LinkedIn often suppresses UA — so combine both signals
-  if (inApp || webViewDetected) {
-
-    document.addEventListener("DOMContentLoaded", function() {
-      // Hard prevent your full site from loading
-      document.body.innerHTML = `
-        <div style="
-          font-family: Inter, sans-serif;
-          padding: 40px;
-          text-align: center;
-          font-size: 18px;
-          line-height: 1.5;
-          color: white;
-        ">
-          <strong>Open ReelGods.com in Your Browser</strong><br><br>
-          LinkedIn’s in-app browser cannot display this site correctly.<br>
-          Tap <strong>•••</strong> and choose <strong>“Open in Chrome/Safari”</strong>.
-        </div>
-      `;
-    });
-  }
-})();
-</script>
+	
 
 	 <meta charset="UTF-8">
 	 <title>Premium iGaming Domains for Sale</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	 <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW44E548K0"></script>
 <script>
@@ -587,6 +547,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
 
 
 
