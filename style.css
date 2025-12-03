@@ -4021,10 +4021,15 @@ margin-bottom: -3vh;
 		  font-size: 0.75rem;
 		  line-height: 1.2;
 	  }
+	  .stepIcon{
+		  width: 31px;
+		  height: 31px;
+	  }
 
 	
   }
 }
+
 
 
 
