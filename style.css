@@ -3964,9 +3964,13 @@ margin-bottom: -3vh;
 		  height: 29px;
 		  width: 29px;
 	  }
+	  .footer-links{
+		  whitespace: nowrap;
+	  }
 
   }
 }
+
 
 
 
