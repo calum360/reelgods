@@ -3998,20 +3998,17 @@ margin-bottom: -3vh;
 	   .navButtons button {
     height: 58px;
     width: 42px;
+		   font-size: 2.4rem;
 	   }
 	  .navButtons{
 		  bottom: -10px !important;
 	  }
 
-	  .navBtn svg {
-  stroke: #fff;
-  stroke-width: 1.6;
-  width: 26px;
-  height: 26px;
-}
+
 	
   }
 }
+
 
 
 
