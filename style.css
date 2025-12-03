@@ -4049,9 +4049,7 @@ margin-bottom: -3vh;
 		  margin-top: 1px;
 	  }
 
-		.step{
-			gap: 4px;
-		}
+		
 	  .stepIconSpacer{
 		  width: 30px;
 		  height: 30px;
@@ -4063,6 +4061,7 @@ margin-bottom: -3vh;
 	  }
   }
 }
+
 
 
 
