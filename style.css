@@ -3890,8 +3890,8 @@ margin-bottom: -1vh;
 @-moz-document url-prefix() {
 
   html, body {
-    -moz-text-size-adjust: 100% !important;
-    text-size-adjust: 100% !important;
+    -moz-text-size-adjust: 75% !important;
+    text-size-adjust: 75% !important;
     font-size: 16px !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
@@ -3903,8 +3903,8 @@ margin-bottom: -1vh;
   }
 
   .hero-logo img {
-    max-width: 240px !important;
-    width: 100% !important;
+    max-width: 120px !important;
+    width: 75% !important;
   }
 
   .hero h1 {
@@ -3920,6 +3920,7 @@ margin-bottom: -1vh;
     padding: 14px 32px !important;
   }
 }
+
 
 
 
