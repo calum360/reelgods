@@ -4042,9 +4042,7 @@ margin-bottom: -3vh;
 
 	  .helpText{
 		  font-size: 7px !important;
-		  width: 300px;
-		  left: 50%;
-		  margin-left: -150px;
+	
 	  }
 
 	  .escrowSteps{
@@ -4061,10 +4059,11 @@ margin-bottom: -3vh;
 		  
 	  }
 	  .helpSection{
-		  margin-top: 5px;
+		  margin-top: 0px;
 	  }
   }
 }
+
 
 
 
