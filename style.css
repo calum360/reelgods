@@ -4029,9 +4029,15 @@ margin-bottom: -3vh;
 		  font-size: 0.8rem;
 	  }
 
+	  .midStepIcon{
+		  width: 30px;
+		  height: auto;
+	  }
+
 	
   }
 }
+
 
 
 
