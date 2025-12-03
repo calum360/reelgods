@@ -4034,9 +4034,14 @@ margin-bottom: -3vh;
 		  height: auto;
 	  }
 
+	  .helpText{
+		  font-size: 0.8rem;
+	  }
+
 	
   }
 }
+
 
 
 
