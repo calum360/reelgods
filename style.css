@@ -4016,6 +4016,10 @@ margin-bottom: -3vh;
   height: auto;        /* preserve aspect ratio */
 		  
 	  }
+	  .secure-transfer-text{
+		  padding-bottom: 3px;
+		  padding-top: 3px;
+	  }
 
 
 	  .escrowIntroText .green {
@@ -4048,6 +4052,7 @@ margin-bottom: -3vh;
 		}
   }
 }
+
 
 
 
