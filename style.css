@@ -4001,7 +4001,7 @@ margin-bottom: -3vh;
 		   font-size: 2.4rem;
 	   }
 	  .navButtons{
-		  bottom: -3px !important;
+		  bottom: -1px !important;
 		  gap: 0.5rem !important;
 	  }
 
@@ -4059,6 +4059,7 @@ margin-bottom: -3vh;
 	  }
   }
 }
+
 
 
 
