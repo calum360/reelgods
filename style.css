@@ -4009,9 +4009,18 @@ margin-bottom: -3vh;
 		  font-size: 10px;
 	  }
 
+	  .secure-transfer-img{
+ display: block;
+  
+  width: 32vw;       /* otherwise take up 40% of viewport width */
+  height: auto;        /* preserve aspect ratio */
+		  
+	  }
+
 	
   }
 }
+
 
 
 
