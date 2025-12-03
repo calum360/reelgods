@@ -3969,13 +3969,15 @@ margin-bottom: -3vh;
 	  }
 
 	  .domainDescription{
-		  font-size: 10px;
+		  font-size: 10px !important;
+		  line-height: 1 !important;
 	  }
 
 	  
 
   }
 }
+
 
 
 
