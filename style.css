@@ -3995,8 +3995,14 @@ margin-bottom: -3vh;
 		   padding: 1px 6px;
 	  }
 
+	   .navButtons button {
+    height: 58px;
+    width: 42px;
+	   }
+
   }
 }
+
 
 
 
