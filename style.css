@@ -3996,12 +3996,13 @@ margin-bottom: -3vh;
 	  }
 
 	   .navButtons button {
-    height: 58px;
+    height: 68px;
     width: 42px;
 		   font-size: 2.4rem;
 	   }
 	  .navButtons{
 		  bottom: -10px !important;
+		  gap: 0.5rem !important;
 	  }
 
 	  .slideCounter{
@@ -4011,6 +4012,7 @@ margin-bottom: -3vh;
 	
   }
 }
+
 
 
 
