@@ -319,13 +319,18 @@
 
 
 function loadIncludes(callback) {
-  const includes = document.querySelectorAll('.card-include');
-  let pending = includes.length;
+  const includes = Array.from(document.querySelectorAll('.card-include'));
 
-  if (pending === 0) return callback();
+  const MIN_READY_CARDS = 5;
 
-  includes.forEach(container => {
+  let loadedCount = 0;
+  let viewerUnlocked = false;
+
+  if (includes.length === 0) return callback();
+
+  includes.forEach((container, index) => {
     const file = container.getAttribute('data-src');
+
     fetch(file)
       .then(res => res.text())
       .then(html => {
@@ -333,28 +338,36 @@ function loadIncludes(callback) {
       })
       .catch(err => {
         console.error("Include failed:", file, err);
-        container.outerHTML = '<div class="domainCard error">Failed to load content.</div>';
+        container.outerHTML =
+          '<div class="domainCard error">Failed to load content.</div>';
       })
       .finally(() => {
-        pending--;
-        if (pending === 0) {
-    if (typeof setupHighlightTracking === 'function') {
-        setupHighlightTracking();
+        loadedCount++;
 
-        const firstCard = document.querySelector('.domainCard');
-        if (firstCard && !document.querySelector('.domainCard.activeCard')) {
-            firstCard.classList.add('activeCard');
+        // Unlock viewer after first 5 cards
+        if (!viewerUnlocked && loadedCount >= MIN_READY_CARDS) {
+          viewerUnlocked = true;
+
+          if (typeof setupHighlightTracking === 'function') {
+            setupHighlightTracking();
+
+            const firstCard = document.querySelector('.domainCard');
+
+            if (
+              firstCard &&
+              !document.querySelector('.domainCard.activeCard')
+            ) {
+              firstCard.classList.add('activeCard');
+            }
+
+            moveHighlight();
+          }
+
+          callback();
         }
-        moveHighlight(); // Position the border immediately
-    }
-	
-	
-    callback();
-}
-
       });
   });
-} 
+}
 /*
 function delayedViewerInit() {
   const script = document.createElement('script');
