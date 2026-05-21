@@ -4076,3 +4076,180 @@ margin-bottom: -3vh;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* 21/05/26*/
+
+/* =========================
+   ULTRA PREMIUM MOBILE NAV
+========================= */
+/* =========================================
+   ULTRA PREMIUM MOBILE NAV OVERRIDE
+   PASTE AT VERY BOTTOM OF CSS
+========================================= */
+
+@media (max-width: 768px) {
+
+  .navButtons {
+    position: relative;
+    gap: 14px !important;
+    padding-bottom: 3.2vh;
+    max-width: 72%;
+    left: 14%;
+  }
+
+  .navButtons button,
+  .navBtn {
+
+    position: relative;
+
+    width: 82px !important;
+    height: 82px !important;
+
+    border-radius: 22px !important;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255,255,255,0.11),
+        rgba(255,255,255,0.035)
+      ) !important;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,0.08) !important;
+
+    box-shadow:
+      0 10px 30px rgba(0,0,0,0.45),
+      inset 0 1px 0 rgba(255,255,255,0.06),
+      inset 0 -1px 0 rgba(0,0,0,0.28),
+      0 0 12px rgba(255,215,0,0.06);
+
+    overflow: hidden;
+
+    transition:
+      transform 0.18s ease,
+      background 0.25s ease,
+      box-shadow 0.25s ease,
+      opacity 0.25s ease !important;
+
+    color: rgba(255,255,255,0.88) !important;
+
+    font-size: 0 !important;
+
+    padding: 0 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* subtle luxury glass sheen */
+  .navBtn::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+      radial-gradient(
+        circle at top left,
+        rgba(255,255,255,0.12),
+        transparent 58%
+      );
+
+    pointer-events: none;
+  }
+
+  /* LEFT BUTTON */
+  .navBtn.prevCardBtn {
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+  }
+
+  /* RIGHT BUTTON */
+  .navBtn.nextCardBtn {
+    border-top-left-radius: 8px !important;
+    border-bottom-left-radius: 8px !important;
+  }
+
+  /* REMOVE OLD TEXT */
+  .navBtn .navLabel,
+  .navBtn .navContent,
+  .navBtn svg {
+    display: none !important;
+  }
+
+  /* CUSTOM PREMIUM ARROWS */
+  .navBtn.prevCardBtn::after,
+  .navBtn.nextCardBtn::after {
+
+    position: relative;
+    z-index: 2;
+
+    font-size: 2.6rem;
+    font-weight: 300;
+    line-height: 1;
+
+    color: rgba(255,255,255,0.92);
+
+    text-shadow:
+      0 2px 8px rgba(0,0,0,0.4);
+
+    transition:
+      transform 0.18s ease,
+      opacity 0.18s ease;
+  }
+
+  .navBtn.prevCardBtn::after {
+    content: "‹";
+    transform: translateX(-1px);
+  }
+
+  .navBtn.nextCardBtn::after {
+    content: "›";
+    transform: translateX(1px);
+  }
+
+  /* PRESS FEEDBACK */
+  .navBtn:active {
+    transform: scale(0.94);
+  }
+
+  .navBtn.prevCardBtn:active::after {
+    transform: translateX(-4px);
+  }
+
+  .navBtn.nextCardBtn:active::after {
+    transform: translateX(4px);
+  }
+
+  /* HOVER */
+  .navBtn:hover {
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255,255,255,0.14),
+        rgba(255,255,255,0.05)
+      ) !important;
+
+    box-shadow:
+      0 14px 34px rgba(0,0,0,0.5),
+      inset 0 1px 0 rgba(255,255,255,0.08),
+      inset 0 -1px 0 rgba(0,0,0,0.32),
+      0 0 16px rgba(255,215,0,0.08);
+  }
+
+}
