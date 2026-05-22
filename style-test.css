@@ -1186,7 +1186,7 @@ letter-spacing: -0.04em;
   height:1px;
 
   margin-top:1rem;
-  margin-bottom:1.3rem;
+  margin-bottom:0.3rem;
 
 
 opacity:1 !important;
@@ -1199,7 +1199,7 @@ box-shadow:
 	
 	.domainBadge {
 
-  top: 15.5px;
+  top: 16.5px;
   margin-left: 7px;
   font-size: 1rem;
   padding: 6px;
@@ -4574,4 +4574,12 @@ margin-bottom: 32px;
 
 .bottomSection {
   margin-top: auto;
+}
+
+@media (max-width: 768px){
+
+  .escrowGuideNav{
+    margin-top: 3.5rem;
+  }
+
 }
