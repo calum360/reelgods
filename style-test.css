@@ -4578,7 +4578,7 @@ margin-bottom: 32px;
 
 @media (max-width: 768px){
 
-  .navButtons .escrowGuideNav{
+  .navButtons.escrowGuideNav{
     margin-top: 9.5rem;
   }
 
