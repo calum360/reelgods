@@ -2780,8 +2780,9 @@ textarea.error {
   }
   .domainDescription{
 	  margin-top: 5px;
-	 min-height: 85px;
+	 min-height: 5.8em;
 	 border: 1px solid red;
+	 
   }
   
   .step{
@@ -4570,3 +4571,7 @@ margin-bottom: 32px;
 
 }
 
+
+.bottomSection {
+  margin-top: auto;
+}
