@@ -637,22 +637,24 @@ color: #ffffffcc;
   height: auto;
   max-height: 42vh; /* Adjust as needed */
   overflow: hidden;
-  
+
   border-radius: 4px;
   margin-bottom: 0px;
   
-  
+
 }
 
 .imageWrapper {
   width: 100%;
   
   max-height: 42vh;
+    min-height: 32vh;
   overflow: hidden;
   border: 1px solid black; /* or your color */
   border-radius: 4px;
   margin-bottom: 5px;
   box-sizing: border-box;
+  
   
 }
 .imageWrapper {
@@ -673,11 +675,12 @@ color: #ffffffcc;
   display: block;
   border: none; /* ✅ Remove border here */
   border-radius: 0;
+  
 }
 
 .imageWrapper {
   border: 1px solid rgba(220, 220, 220, 0.25);
-  border-radius:8px;
+  border-radius:12px;
   
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.08);
 }
@@ -1329,10 +1332,10 @@ overflow:hidden;
 	padding-right: 0px;	
     margin-left: 0px;
 	margin-right: 0px;
-	padding-left: 6px;
-	padding-right: 6px;
+	padding-left: 2px;
+	padding-right: 2px;
 
-	padding-top: 6px;
+	padding-top: 1px;
 	WIDTH: 95VW-8PX;
 	transition: border 1.8s ease, transform 1.8s ease, opacity 0.1 ease; 
 	border: 3px solid transparent;
@@ -4720,6 +4723,17 @@ align-items: center;
 
 
 @media (max-width: 768px) {
+	
+	.imageWrapper {
+  aspect-ratio: 1.75 / 1;
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
   .trust-badge {
     left: 50%;
@@ -4729,9 +4743,12 @@ align-items: center;
 	width: 50px;
   }
   
+  .sec{
+	  content: url('images/secure2.png');
+  }
   .escrow{
-	  
-	  
+	   content: url('images/escrow2.png');
+	   opacity: 0.64;
   }
 
 }
