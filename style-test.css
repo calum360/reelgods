@@ -4710,3 +4710,26 @@ align-items: center;
 
 }
 
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .trust-badge {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+
+	width: 50px;
+  }
+  
+  .escrow{
+	  
+	  
+  }
+
+}
