@@ -196,7 +196,6 @@ overflow-y: auto; /* ✅ Allow internal scrolling */
 	margin-top: 0px;
 	
 
-	
 }
 
 .trust-badge {
@@ -310,6 +309,7 @@ border: none;
 box-sizing: border-box;
 
     background:#1b1f24;
+	
     padding: 16px;
 	padding-right: 0px;
     margin-left: 0px;
@@ -335,6 +335,20 @@ height: 95vh;
 
   scroll-snap-align: start;
   box-sizing: border-box;
+
+
+background:
+linear-gradient(
+180deg,
+#020202 0%,
+#050505 38%,
+#020202 100%
+);
+
+box-shadow:
+inset 0 0 120px rgba(212,170,67,0.025);
+
+
 }
 
 
@@ -883,6 +897,7 @@ font-family: 'poppins','inter', sans-serif;
 
 .domainCard.activeCardColor {
   background-color: #1b1f24; /* or another slightly different tone */
+  
 }
 
 .navBtn {
@@ -1305,6 +1320,7 @@ overflow:hidden;
 	transition: border 1.8s ease, transform 1.8s ease, opacity 0.1 ease; 
 	border: 3px solid transparent;
 	
+
 	
 
 }
@@ -1368,19 +1384,19 @@ overflow:hidden;
   );
 
 
-  color: rgba(233,198,108,0.92);
+  color: rgba(233,198,108,0.88);
 
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 1.08rem;
 
   text-transform: uppercase;
-  letter-spacing: 0.38em;
+  letter-spacing: 0.8em;
 
   text-align: center;
 
  
-border: 1px solid rgba(235,190,85,0.68);
+border: 0.75px solid rgba(235,190,85,0.48);
   border-radius: 14px;
 
 
@@ -1419,6 +1435,10 @@ justify-content:center;
 
 
 
+}
+
+.buyNow:hover{
+	
 }
 
 .buyNow::before {
@@ -1550,6 +1570,7 @@ line-height: 1;
   align-items: center;
   gap: 15px; /* nice breathing space */
   margin-top: 12px;
+  
 }
 
 
@@ -4581,5 +4602,89 @@ margin-bottom: 32px;
   .navButtons.escrowGuideNav{
     margin-top: 9.5rem;
   }
+
+}
+@media (min-width: 769px) {
+
+  .buyNow {
+    width: 420px;
+    margin-top: 3rem;
+  }
+
+  .navButtons {
+    margin-top: 3.5rem;
+  }
+
+  .trust-badge {
+    bottom: 2.2rem;
+    left: 2.2rem;
+    opacity: 0.72;
+  }
+
+  .slideCounter {
+    bottom: 2.6rem;
+    right: 2.6rem;
+  }
+  .domainTitle {
+  margin-top: .6rem;
+
+ 
+}
+.domainTitle h2{
+	font-size: 1.7rem;
+	padding-left: .5rem;
+	
+}
+.domainDescription {
+  margin-top: .1rem;
+}
+.domainBadge{
+	margin-left: 1rem;
+	margin-top: 0.13rem;
+}
+
+.titleDivider{
+  width:100%;
+  height:1px;
+  background:linear-gradient(
+    90deg,
+    rgba(212,175,55,0.0) 0%,
+    rgba(212,175,55,0.55) 18%,
+    rgba(212,175,55,0.55) 82%,
+    rgba(212,175,55,0.0) 100%
+  );
+  margin-top:1.1rem;
+}
+.buyNow{
+	
+	font-size: 1rem;
+	padding-top: 18.5px;
+	padding-bottom: 18px;
+	padding-left: 90px;
+	padding-right: 90px;
+	letter-spacing: 0.15rem;
+	
+  
+  margin: 6px auto 0 auto;
+
+
+}
+.actionGroup {
+   gap: 10px;
+  margin-top: -8px;
+  
+}
+.domainTitle {
+  gap: 4px;
+  justify-content: center;
+
+align-items: center;
+}
+.domainBadge {
+  top: -2.2px;
+}
+.domainDescription {
+  margin-top: 4px;
+}
 
 }
