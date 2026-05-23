@@ -4565,6 +4565,8 @@ margin-bottom: 32px;
       background 0.25s ease;
 
     -webkit-tap-highlight-color: transparent;
+	margin-left: 20px;
+	margin-right: 20px;
   }
 
   .navBtn.prevCardBtn {
