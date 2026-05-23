@@ -791,8 +791,8 @@ color: #ffffffcc;
   border-radius: 20px;
 	width: 39px;
 	height: 39px;
-  left: 10px;
-  top: 10px;
+  left: 13px;
+  top: 13px;
   
 border: 0.5px solid grey;
   
@@ -808,7 +808,7 @@ border: 0.5px solid grey;
 .mobile-close svg {
   will-change: stroke;
   position: relative;
-  top: -1.5px;
+  top: -.5px;
   width: 15px;
    stroke: white;         /* if using stroke-based icons */
    stroke-width: 12px;
@@ -1229,11 +1229,11 @@ box-shadow:
 	
 	.domainBadge {
 
-  top: 21.5px;
+  top: 23.5px;
   margin-left: 7px;
   font-size: 0.9rem;
   padding: 4px;
-  padding-top: 8px;
+  padding-top: 6.5px;
   padding-left: 13px;
   padding-right: 15px;
   
@@ -1329,10 +1329,10 @@ overflow:hidden;
 	padding-right: 0px;	
     margin-left: 0px;
 	margin-right: 0px;
-	padding-left: 3px;
-	padding-right: 2.5px;
+	padding-left: 6px;
+	padding-right: 6px;
 
-	padding-top: 2px;
+	padding-top: 6px;
 	WIDTH: 95VW-8PX;
 	transition: border 1.8s ease, transform 1.8s ease, opacity 0.1 ease; 
 	border: 3px solid transparent;
