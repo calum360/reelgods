@@ -4876,11 +4876,14 @@ align-items: center;
 	
 	
   .domainDescription{
-font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+
+   font-family: Roboto, "Droid Sans", system-ui, sans-serif;
+
+
 font-weight: 300;
-letter-spacing: 0.015em;
-line-height: 1.5;
-opacity:0.6;
+letter-spacing: 0.05em;
+line-height: 1.6;
+opacity:0.7;
 }
 	
 .navButtons.single {
