@@ -4735,3 +4735,96 @@ align-items: center;
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .navButtons {
+    gap: 10px;
+    margin-top: auto;
+    padding-bottom: 2vh;
+    justify-content: center;
+    align-items: center;
+    bottom: 10px;
+    position: relative;
+  }
+
+  .navButtons button {
+
+    width: 64px;
+    height: 72px;
+
+    padding: 0;
+
+    border-radius: 20px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.045) 0%,
+        rgba(255,255,255,0.012) 18%,
+        rgba(0,0,0,0.82) 100%
+      );
+
+    border: 1px solid rgba(212,170,67,0.32);
+
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.05),
+      0 0 10px rgba(212,170,67,0.04),
+      0 8px 18px rgba(0,0,0,0.45);
+
+    backdrop-filter: blur(4px);
+
+    transition:
+      transform 0.18s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease,
+      background 0.25s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(230,195,105,0.92);
+
+    font-size: 2.45rem;
+    font-weight: 250;
+
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .navButtons button:active {
+
+    transform: scale(0.96);
+
+    border-color: rgba(235,190,85,0.55);
+
+    box-shadow:
+      0 0 16px rgba(212,170,67,0.12),
+      0 4px 10px rgba(0,0,0,0.4);
+  }
+
+  .navBtn.prevCardBtn {
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+  }
+
+  .navBtn.nextCardBtn {
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+  }
+
+  .navBtn.prevCardBtn::before {
+    content: '<';
+  }
+
+  .navBtn.nextCardBtn::before {
+    content: '>';
+  }
+
+  .navBtn .navLabel,
+  .navBtn .navContent {
+    display: none;
+  }
+
+}
+
