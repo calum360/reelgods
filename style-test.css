@@ -806,7 +806,7 @@ color: #ffffffcc;
 
     /* remove harsh border */
     border: 0.5px solid rgba(255, 215, 120, 0.3);
-	border: 0.5px solid rgba(255, 255, 255, 0.2);
+	border: 0.5px solid rgba(255, 255, 255, 0.35);
 	 box-shadow:
         0 2px 10px rgba(0,0,0,0.18),
         inset 0 1px 0 rgba(255,255,255,0.04);
