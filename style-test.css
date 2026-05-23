@@ -4873,6 +4873,16 @@ align-items: center;
 
 
 @media (max-width: 768px) {
+	
+	
+  .domainDescription{
+font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+font-weight: 300;
+letter-spacing: 0.015em;
+line-height: 1.5;
+opacity:0.6;
+}
+	
 .navButtons.single {
   justify-content: flex-end;
 }
@@ -4910,12 +4920,7 @@ align-items: center;
     opacity: 0 !important;
     pointer-events: none !important;
   }
+  
 }
 
 
-.domainDescription{
-font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
-font-weight: 300;
-letter-spacing: 0.015em;
-line-height: 1.5;
-}
