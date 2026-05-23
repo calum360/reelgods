@@ -574,11 +574,12 @@ color: #ffffffcc;
 	opacity: 1;
   transition: background 0.3s ease;
   position: sticky;
-  top: 50px;
-  left: 50px;
+  top: 60px;
+  left: 60px;
 
 	
 }
+
 /*
 .mobile-close {
   display: none;
@@ -636,6 +637,7 @@ color: #ffffffcc;
   height: auto;
   max-height: 42vh; /* Adjust as needed */
   overflow: hidden;
+  min-height: 31vh;
   border-radius: 4px;
   margin-bottom: 0px;
   
@@ -644,12 +646,14 @@ color: #ffffffcc;
 
 .imageWrapper {
   width: 100%;
+  
   max-height: 42vh;
   overflow: hidden;
   border: 1px solid black; /* or your color */
   border-radius: 4px;
   margin-bottom: 5px;
   box-sizing: border-box;
+  
 }
 .imageWrapper {
   border-radius: 6px;
@@ -774,6 +778,7 @@ color: #ffffffcc;
 
 .preload-viewer #mobileCloseBtn svg {
   stroke: white;
+ 
 }
 
 .mobile-close {
@@ -782,7 +787,13 @@ color: #ffffffcc;
 }
 #domainViewer.visible .mobile-close {
   opacity: 1;
+  border-radius: 20px;
+	width: 33px;
+	height: 33px;
+  left: 12px;
+  top: 14px;
   
+border: 0.5px solid grey;
   
 }
 
@@ -795,8 +806,11 @@ color: #ffffffcc;
 }
 .mobile-close svg {
   will-change: stroke;
-  
-   stroke: #ffffffcc;         /* if using stroke-based icons */
+  position: relative;
+  top: -3.5px;
+  width: 15px;
+   stroke: white;         /* if using stroke-based icons */
+   stroke-width: 12px;
   fill: #ffffffcc;           /* if using font-icon or path-filled icons */
 
 }
@@ -1261,7 +1275,8 @@ overflow:hidden;
 		border: 2px solid black;
 		padding: auto;
 		width: 60px;
-		padding-top: 5px;
+		padding-top: 0px;
+		padding:0;
 	top: 6px;
 	left: 6px;	
 
@@ -1313,9 +1328,10 @@ overflow:hidden;
 	padding-right: 0px;	
     margin-left: 0px;
 	margin-right: 0px;
-	padding-left: 6px;
-	padding-right: 6px;
-	padding-top: 6px;
+	padding-left: 3px;
+	padding-right: 2.5px;
+
+	padding-top: 2px;
 	WIDTH: 95VW-8PX;
 	transition: border 1.8s ease, transform 1.8s ease, opacity 0.1 ease; 
 	border: 3px solid transparent;
@@ -4604,6 +4620,10 @@ margin-bottom: 32px;
   }
 
 }
+
+
+
+
 @media (min-width: 769px) {
 
   .buyNow {
@@ -4688,3 +4708,4 @@ align-items: center;
 }
 
 }
+
