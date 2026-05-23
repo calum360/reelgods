@@ -789,6 +789,8 @@ color: #ffffffcc;
   opacity: 0;
   transition: opacity 0.15s ease;
 }
+
+
 #domainViewer.visible .mobile-close {
   opacity: 1;
   border-radius: 20px;
@@ -4900,3 +4902,20 @@ align-items: center;
 }
 
 
+
+@media (min-width: 769px) {
+  .mobile-close,
+  #domainViewer.visible .mobile-close {
+   
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
+
+.domainDescription{
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+letter-spacing: -0.015em;
+line-height: 1.5;
+}
