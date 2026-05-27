@@ -703,7 +703,7 @@ color: #ffffffcc;
 
 .highlight-frame {
   position: absolute;
-  pointer-events: none;border: 1px solid rgba(212, 175, 55, 0.42);
+  pointer-events: none;border: 2px solid rgba(212, 175, 55, 0.42);
 
 box-shadow:
   0 0 6px rgba(212,175,55,0.10),
@@ -5444,10 +5444,10 @@ position: relative;
   }
 
   .domainBadge {
-    width: 90.7px !important;
-    height: 42.3px !important;
+    width: 77px !important;
+    height: 36px !important;
 
-    transform: translateY(2px) !important;
+    transform: translateY(1.5px) !important;
     margin-right: 4.2% !important;
 	opacity: 1;
   }
@@ -5782,3 +5782,35 @@ position: relative;
     opacity: 0;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
