@@ -41,7 +41,7 @@
   
 	
 
-  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="style-test.css"> 
 	
 
 	
@@ -106,12 +106,7 @@
 
     <div id="domainViewer" >
 	
-		 <button id="desktopCloseBtn" class="desktop-close" aria-label="Close Viewer">
-  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-    <line x1="10" y1="10" x2="90" y2="90" />
-    <line x1="10" y1="90" x2="90" y2="10" />
-  </svg>
-</button>
+		 
 
 		<button id="mobileCloseBtn" class="mobile-close" aria-label="Close">
   <svg id="mobileCloseSvg" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
@@ -126,22 +121,50 @@
 
 
 <div class="content-wrapper">
+<button id="desktopCloseBtn" class="desktop-close" aria-label="Close Viewer">
+  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="10" y1="10" x2="90" y2="90" />
+    <line x1="10" y1="90" x2="90" y2="10" />
+  </svg>
+</button>  
 	
         <div class="domainCards">
 							
 				<div class="domainCard wager-strike">
-					  <div class="imageWrapper">
+				
+					 <div class="imageWrapper">
 					  
-					  	<img src="images/wager-strike-new.webp" alt="WagerStrike.com branding image" class="domainImage" />
+					  
+					  
+					  <!--	<img src="images/wager-strike-new.png" alt="WagerStrike.com branding image" class="domainImage" />-->
+							<picture>
+
+  <!-- Mobile version -->
+  <source 
+    media="(max-width: 768px)" 
+    srcset="images/wager-strike-mobile.webp">
+
+  <!-- Desktop version -->
+  <img 
+    src="images/wager-strike-new.webp"
+    alt="Wager Strike"
+    class="domainImage">
+
+</picture>
 					  
 					  </div>
 					  
 					<div class="cardContent">
+																		 
 								<div class="domainTitle">
   <h2>Wager Strike</h2>
-  <span class="domainBadge">.COM</span>
-</div> <p class="domainDescription">Clear sportsbook branding with strong commercial appeal.</p>
-<span class="price">Inquire</span>
+  <span class="domainBadge">.COM</span> </div>
+ <div class="titleDivider"></div>
+
+
+
+<p class="domainDescription">Clear sportsbook branding with strong commercial appeal.</p>
+<!---->
 <!--<form action="https://www.escrow.com/checkout" method="post" target="_blank">-->
 						<form action="#" method="post" target="_blank">
   <input type="hidden" name="type" value="domain_name">
@@ -161,7 +184,10 @@
   <input type="hidden" name="auto_accept" value="">
   <input type="hidden" name="auto_reject" value="">
   <input type="hidden" name="item_key" value="undefined">
-  	<button class="buyNow">Buy Now </button>
+  
+  
+  	<button class="buyNow">Acquire Domain</button>
+	
   <img src="https://t.escrow.com/1px.gif?name=bin&price=25000&title=Wager%20Strike%20-%20Premium%20Casino%20Domain&user_id=3471912" style="display: none;">
 </form>
 							                               
@@ -321,7 +347,7 @@
 function loadIncludes(callback) {
   const includes = Array.from(document.querySelectorAll('.card-include'));
 
-  const MIN_READY_CARDS = 4;
+  const MIN_READY_CARDS = 2;
 
   let loadedCount = 0;
   let viewerUnlocked = false;
@@ -575,6 +601,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
 
 
 
